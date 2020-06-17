@@ -1,0 +1,65 @@
+<!-- Navbar -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--  <span>HOME</span> -->
+    <span><h2 style="cursor: pointer;" routerLink="">Client Panel</h2></span>
+    <span class="spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Login Form  1-->
+
+<!-- <div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align: center;">Sign In</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Email" />
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" />
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+
+        <mat-checkbox>Remember Me!</mat-checkbox>
+
+        <button mat-raised-button color="primary" class="login-button">
+          Log In
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+<!-- Login Form  2-->
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="signUpForm" (submit)="onSubmit()"  class="example-form">
+        <mat-form-field class="example-full-width form-field">
+          <input type="email"  formControlName="email" matInput required placeholder="Email">
+          <mat-error *ngIf="signUpForm.controls.email.touched && signUpForm.controls.email.invalid">
+            <span *ngIf="signUpForm.controls.email.errors.required"><b>This field is mandatory.</b></span>
+            <span *ngIf="signUpForm.controls.email.errors.pattern"><b>This field is invalid.</b></span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width form-control">
+          <input type="password" formControlName="password" matInput required  placeholder="Password">
+          <mat-error *ngIf="signUpForm.controls.password.touched && signUpForm.controls.password.invalid">
+            <span *ngIf="signUpForm.controls.password.errors.required"><b>This field is mandatory.</b></span>
+            <span *ngIf="signUpForm.controls.password.errors.minlength"><b>Characters must be more than 8</b></span>
+          </mat-error>
+        </mat-form-field>
+      <button mat-stroked-button  type="submit" color="accent" class="btn-block">Log in</button>
+    </form>
+  </mat-card>
+</div>
+

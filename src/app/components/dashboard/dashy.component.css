@@ -1,0 +1,83 @@
+.OpMe{
+  opacity: 0.4;
+}
+
+/* .shapey{
+
+  align-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  width: 40%;
+  padding-bottom: 2%;
+} */
+/* div.absolute {
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;
+} */
+
+
+
+table {
+  width: 100%;
+}
+
+.data-table {
+  width: 80%;
+  margin: 10% auto;
+}
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 8px 8px 8px 0;
+}
+
+
+.mat-form-field {
+  font-size: 14px;
+  width: 30%;
+  align-content: center;
+  margin: 50% 10%;
+  margin-top: 5%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.spacey {
+  align-content: center;
+  margin-left: 5%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.space-text {
+  position: absolute;
+  display: block;
+  top: 30%;
+  bottom: 0;
+  right:0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+}
+
+a.backLink {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.spacer {
+  flex: 1 1 auto;
+}
