@@ -8,14 +8,14 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataInputService {
-  // data: [];
   url = 'https://jsonplaceholder.typicode.com/users';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getData() {
+  dataReport() {
     return this.http.get(this.url);
-
   }
 }

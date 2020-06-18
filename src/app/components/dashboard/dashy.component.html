@@ -10,14 +10,14 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div *ngIf="dataIn.length > 0">
+<div *ngIf="dataSource">
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput  (keyup)="applyFilter($event)" placeholder="Search for" />
   </mat-form-field>
 
-  <div id="contentPdf" #contentPdf class="mat-elevation-z8 data-table">
-    <table mat-table [dataSource]="dataIn" matSort >
+  <div id="contentPdf" #contentPdf >
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 data-table" >
 
       <!-- ID Column -->
       <ng-container matColumnDef="id">
@@ -52,8 +52,8 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-
-    <mat-paginator #paginator [length]="dataIn?.length"> </mat-paginator>
+    <mat-paginator [pageSizeOptions]="dataSource.length"></mat-paginator>
+    
   </div>
 
     <mat-card-title> Export as: </mat-card-title>
@@ -87,6 +87,6 @@
     </ng-container>
 </div>
 
-<div class="space-text" *ngIf="!dataIn.length">
+<div class="space-text" *ngIf="!dataSource">
   <h1> <i class="fa fa-users"></i> Loading Users from JSON API....</h1>
 </div>
