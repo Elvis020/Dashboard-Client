@@ -13,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DataInputService } from './components/dashboard/services/data-input.service';
-import { DatahttpComponent } from './components/datahttp/datahttp.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -27,8 +26,7 @@ import { MatSortModule } from '@angular/material/sort';
     AppComponent,
     LoginComponent,
     DashyComponent,
-    DatahttpComponent,
-    
+
   ],
   imports: [
     BrowserModule,

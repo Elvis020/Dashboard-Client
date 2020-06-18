@@ -19,12 +19,11 @@ export class DashyComponent implements OnInit {
   ELEMENT_DATA: DataTypes[];
   displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'website'];
   dataSource = new MatTableDataSource<DataTypes>(this.ELEMENT_DATA);
-
-
   selectedValue2: string;
   values = '';
   chooseValues = ['pdf', 'excel'];
   isAuthenticated: boolean;
+  response : any;
 
 
 
@@ -35,6 +34,7 @@ export class DashyComponent implements OnInit {
 
   ngOnInit() {
     this.getAllData();
+    console.log(this.ELEMENT_DATA)
   }
 
   constructor(
@@ -45,10 +45,12 @@ export class DashyComponent implements OnInit {
     getAllData() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-    const response = this.dataServ.dataReport();
-    response.subscribe(
+    this.response = this.dataServ.dataReport();
+    this.response.subscribe(
       (report => this.dataSource.data = report as DataTypes[])
     );
+    // return this.response;
+
   }
 
 
