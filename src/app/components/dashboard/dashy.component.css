@@ -1,7 +1,46 @@
 .OpMe{
   opacity: 0.4;
 }
+.mat-toolbar.mat-primary {
+  background: #011a5f;
+  color: #fff;
+}
 
+.mat-raised-button.mat-primary {
+  background: #003a77;
+  color: #fff;
+}
+
+mat-label{
+  color: white;
+}
+
+input {
+  color: white;
+}
+.nicer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 8%;
+}
+.nicer1 {
+  position: absolute;
+  left: 65%;
+  right: 0;
+  bottom: 0;
+  top: 20%;
+}
+
+body {
+  background-image: linear-gradient(to bottom,#1d1c1c2f, #8583836e), url('https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 120vh;
+  font-family: 'Roboto', sans-serif;
+}
 
 th.mat-sort-header-sorted {
   color: black;
