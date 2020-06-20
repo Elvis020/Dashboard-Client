@@ -1,6 +1,7 @@
 # ClientPanel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+This is a web application in angular with angular material.It includes a login and dashboard component.The components  retrieve data from the JSON placeholder api in JSON format.It prevent unauthorised persons from accessing the dashboard component. The login details are: email:elvis@gmail.com aand Password: password. Data was passed around using the @ViewChild, event and property binding and the services component.The dashboard component contains a table that can be filtered and sorted by any of the table headers.Data in the table can also be exported to excel and PDF.
 
 ## Development server
 
